@@ -19,3 +19,18 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: syedimranFB/multi-stage-test
           event-type: my-custom-event
+
+  deploy-production:
+    name: Deploy to testing
+    environment:
+      name: Testing
+    if: github.event.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Dispatch Event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PAT }}
+          repository: syedimranFB/multi-stage-production
+          event-type: my-custom-event  
+      
