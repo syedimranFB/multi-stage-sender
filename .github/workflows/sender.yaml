@@ -5,7 +5,6 @@ on:
     branches: [ main, test ]
 
 jobs:
-
   deploy-testing:
     name: Deploy to testing
     environment:
@@ -32,5 +31,5 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           repository: syedimranFB/multi-stage-production
-          event-type: my-custom-event  
-      
+          event-type: my-custom-event
+
