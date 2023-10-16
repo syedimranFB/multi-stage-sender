@@ -18,9 +18,9 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: syedimranFB/multi-stage-test
           event-type: my-custom-event
-          
+
   deploy-production:
-    name: Deploy to production
+    name: Deploy to Production
     environment:
       name: Production
     if: github.event.ref == 'refs/heads/main'
@@ -32,3 +32,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: syedimranFB/multi-stage-production
           event-type: my-custom-event
+
