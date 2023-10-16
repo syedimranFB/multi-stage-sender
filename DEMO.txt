@@ -1,7 +1,2 @@
 
-testing from sender - to testing env 
-
---------------x---X-----X---------------
-
-prod test env
-
+final test (test env/prod env)
