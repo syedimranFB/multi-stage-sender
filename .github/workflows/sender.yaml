@@ -5,7 +5,6 @@ on:
     branches: [ main, test ]
 
 jobs:
-
   deploy-testing:
     name: Deploy to testing
     environment:
@@ -18,4 +17,18 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           repository: syedimranFB/multi-stage-test
+          event-type: my-custom-event
+          
+  deploy-production:
+    name: Deploy to production
+    environment:
+      name: Production
+    if: github.event.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Dispatch Event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PAT }}
+          repository: syedimranFB/multi-stage-production
           event-type: my-custom-event
