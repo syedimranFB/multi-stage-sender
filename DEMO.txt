@@ -1,2 +1,1 @@
-final test for test/prod env
-it works?
+sending test req test/prod
