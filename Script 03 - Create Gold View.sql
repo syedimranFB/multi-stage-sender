@@ -3,7 +3,7 @@
 -----------------------------------------------------
 -----------------------------------------------------
 
--- this is a test commit
+-- this is a test commit check prod
 IF EXISTS ( SELECT * FROM sys.views 
 WHERE object_id = OBJECT_ID('gold.TEAM') )
 DROP view gold.TEAM
