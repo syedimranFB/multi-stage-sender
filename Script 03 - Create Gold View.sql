@@ -3,7 +3,7 @@
 -----------------------------------------------------
 -----------------------------------------------------
 
--- devops ci-cd testing, test env - prod env
+-- devops ci-cd testing, test env - prod env adding this new line
 IF EXISTS ( SELECT * FROM sys.views 
 WHERE object_id = OBJECT_ID('gold.TEAM') )
 DROP view gold.TEAM
