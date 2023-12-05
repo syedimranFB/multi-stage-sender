@@ -1,3 +1,4 @@
+-- this commit is made by syed
 IF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseDelimitedTextFormat') 
 	CREATE EXTERNAL FILE FORMAT [SynapseDelimitedTextFormat] 
 	WITH ( FORMAT_TYPE = DELIMITEDTEXT ,
