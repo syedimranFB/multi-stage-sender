@@ -2,7 +2,7 @@
 -----------------------------------------------------
 -----------------------------------------------------
 
-
+-- demo test
 IF EXISTS ( SELECT * FROM sys.views 
 WHERE object_id = OBJECT_ID('silver.COMPANY') )
 DROP view silver.COMPANY
